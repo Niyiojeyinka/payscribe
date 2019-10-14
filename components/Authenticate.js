@@ -1,23 +1,19 @@
-import React, { Component } from "react";
-import { View, ImageBackground } from "react-native";
-import w3 from "../assets/styles/w3Native";
-import { Image } from "react-native-elements";
-import Dashboard from "./Dashboard";
-import Front from "./Front";
+import React, {Component} from 'react';
+import {View, ImageBackground} from 'react-native';
+import w3 from '../assets/styles/w3Native';
+import {Image} from 'native-base';
+import Dashboard from './Dashboard';
+import Front from './Front';
 
 class Splash extends Component {
   render() {
     return (
       <ImageBackground
-        source={require("../assets/images/bg.jpeg")}
-        style={[w3.Screen, w3.Blue]}
-      >
+        source={require('../assets/images/front.png')}
+        style={[w3.Screen, w3.Blue]}>
         <View style={[w3.RowColumn, w3.Padding]}>
           <View style={[w3.PaddingJumbo]}>
-            <Image
-              source={require("../assets/images/front-logo.png")}
-              style={{ width: 300, height: 210 }}
-            />
+            <Text>g</Text>
           </View>
         </View>
       </ImageBackground>
@@ -30,18 +26,18 @@ export default class Authenticate extends Component {
 
     //check for authentication here
 
-    this.state = { currentScreen: "Splash" };
+    this.state = {currentScreen: 'Splash'};
     setTimeout(() => {
       //screen returned from authentication
-      this.setState({ currentScreen: "s" });
+      //this.setState({ currentScreen: "s" });
     }, 3000);
   }
 
   render() {
-    const { currentScreen } = this.state;
-    if (currentScreen == "Splash") {
-      return <Splash />;
-    } else if (currentScreen == "Dashboard") {
+    const {currentScreen} = this.state;
+    if (currentScreen == 'Splash') {
+      return <Front />;
+    } else if (currentScreen == 'Dashboard') {
       return <Dashboard />;
     } else {
       return <Front />;

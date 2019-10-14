@@ -10,7 +10,7 @@ import {
 import w3 from "../assets/styles/w3Native";
 import Icon from "react-native-vector-icons/FontAwesome";
 const deviceWidth = Dimensions.get("window").width;
-import { Button, CheckBox } from "react-native-elements";
+import { Button, CheckBox } from "native-base";
 import { withNavigation } from "react-navigation";
 
 class Login extends Component {
@@ -24,7 +24,7 @@ class Login extends Component {
   render() {
     return (
       <ImageBackground
-        source={require("../assets/images/bg.jpeg")}
+        source={require("../assets/images/front.png")}
         style={[w3.Screen, w3.Blue]}
       >
         <View style={[w3.RowColumn, { paddingTop: 100 }]}>

@@ -5,23 +5,24 @@ import Register from "./components/Register";
 import ForgetPassword from "./components/ForgetPassword";
 import Login from "./components/Login";
 import PostRegister from "./components/PostRegister";
-import DrawerNavigation from "./components/DrawerNavigation";
+//import DrawerNavigation from "./components/DrawerNavigation";
 import TopMenuBars from "./components/TopMenuBars";
 
 import {
   createSwitchNavigator,
-  createStackNavigator,
-  createAppContainer
+  createAppContainer,
 } from "react-navigation";
+import { createStackNavigator } from 'react-navigation-stack';
+//import { createStackNavigator  } from 'react-navigation-stack';
 
-const UserStack = createStackNavigator({
+/*const UserStack = createStackNavigator({
   DrawerNavigation: {
     screen: DrawerNavigation,
     navigationOptions: {
       header: <TopMenuBars />
     }
   }
-});
+});*/
 const PublicStack = createStackNavigator({
   Front,
   Register,
@@ -29,11 +30,11 @@ const PublicStack = createStackNavigator({
   Login,
   ForgetPassword
 });
-export const Main = createAppContainer(
+export const App = createAppContainer(
   createSwitchNavigator(
     {
       AuthLoading: Authenticate,
-      User: UserStack,
+    //  User: UserStack,
       Public: PublicStack
     },
     {
