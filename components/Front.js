@@ -17,31 +17,15 @@ class Front extends Component {
   };
   render() {
     return (
+    <View style={[w3.Screen]}>
+    <View style={[{flex:1}]}>
       <ImageBackground
         source={require("../assets/images/bg.jpeg")}
-        style={[w3.Screen, w3.White]}
+        style={[ w3.White]}
       >
-        <View style={[w3.RowColum, w3.Padding]}>
-          <View style={[w3.Half, w3.PaddingJumbo]}>
-            <Image
-              source={require("../assets/images/front-logo.png")}
-              style={{ width: 300, height: 210 }}
-            />
-          </View>
-          <View style={[w3.Half, w3.PaddingLarge]}>
-            <Button
-              onPress={() => this.props.navigation.navigate("Register")}
-              buttonStyle={[w3.MarginTop, w3.MarginRight, w3.MarginLeft]}
-              title="Register"
-            />
-            <Button
-              onPress={() => this.props.navigation.navigate("Login")}
-              title="Login"
-              buttonStyle={[w3.MarginTop, w3.MarginRight, w3.MarginLeft]}
-            />
-          </View>
-        </View>
+</View>
       </ImageBackground>
+      </View>
     );
   }
 }
