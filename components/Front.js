@@ -32,7 +32,12 @@ class Front extends Component {
             </View>
           </ImageBackground>
         </View>
-        <View style={[{flex: 2, flexDirection: 'row'}]}>
+        <View style={[{flex: 1, flexDirection: 'row'}]}>
+          <Image
+            source={require('../assets/images/transfer_money.png')}
+            style={[{width: 200, height: 150}]}></Image>
+        </View>
+        <View style={[{flex: 3, flexDirection: 'row'}]}>
           <View style={[{flex: 4}, w3.Padding, w3.MarginBottom]}>
             <Text>{'\n\n'}</Text>
             <Text style={[{opacity: 0.52}, w3.Bold, w3.XxLarge]}>
@@ -40,12 +45,15 @@ class Front extends Component {
             </Text>
             <Text>{'\n'}</Text>
             <Text style={[{opacity: 0.52}, w3.Medium]}>
-              Buy airtime ,pay your TV Subscription ,pay your bill with
-              payscribe
+              Buy airtime ,data,pay your TV Subscription,pay your Electricity
+              bill with payscribe
             </Text>
           </View>
         </View>
         <Button
+          onPress={() => {
+            this.props.navigation.navigate('Register');
+          }}
           rounded
           style={[
             {marginBottom: 32, width: windowWidth - windowWidth * (20 / 100)},
